@@ -1,0 +1,46 @@
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* style.css */
+.box {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 10px;
+  margin: 20px;
+  width:auto ;
+  height: 100%;
+}
+
+
+.toolbar {
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toolbar h1 {
+  margin: 0;
+}
+
+/* seperate the workspaces */
+.workspace{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.latex_eq,
+.latex_code,
+.latex_out {
+  padding: 20px;
+  border: 2px solid #3498db;
+  flex: 1;
+}
