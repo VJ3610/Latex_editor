@@ -4,25 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-Cj2f5LzV5s9lZJKt8KpdsoY/3A6s53PjCMItD5qz+4F7nOm4/GfI05+jNLW8krDX6Lrgi9MlzwUwPi5U3YmGyQ==" crossorigin="anonymous" />
     <title>Equation Editor</title>
 </head>
 <body>
     <div class="box">
         <div class="toolbar">
-            <h1>Equation Editor</h1>
+          <h1>Equation Editor</h1>
         </div>
         <div class="workspace">
-          <div class="latex_eq">
-
-          </div>
-          <div class="latex_code">
-
-         </div>
-          <div class="latex_out">
-            
-          </div>
+            <div class="latex_eq">
+                <!-- Your HTML buttons -->
+                <button onclick="updateLatex('\\sqrt{x}')">Square Root</button>
+                <button onclick="updateLatex('\\frac{x}{y}')">Fraction</button>
+                <!-- Add more buttons  -->
+            </div>
+            <div class="latex_code">
+                <textarea class="display" id="latexOutput"></textarea>
+                <!-- LaTeX symbols will be displayed here -->
+            </div>
+            <div class="latex_display" id="codeOutput">
+                <!-- Output of the code will be displayed here -->
+            </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-+lT03oxUO9nbR1+2A4UB9iPhwMG/NSNmrzUzvcvzoQK8n3gm/X2ClNq+bu6i6GkmS+te++TOebda7CEdRguCgA==" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
