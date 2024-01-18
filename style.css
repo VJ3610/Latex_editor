@@ -44,3 +44,7 @@ body {
   border: 2px solid #3498db;
   flex: 1;
 }
+
+textarea{
+  resize: none;
+}

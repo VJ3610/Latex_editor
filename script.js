@@ -1,44 +1,57 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//   const script = document.createElement('script');
-//   script.src = 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js';
-//   script.integrity = 'sha512-+lT03oxUO9nbR1+2A4UB9iPhwMG/NSNmrzUzvcvzoQK8n3gm/X2ClNq+bu6i6GkmS+te++TOebda7CEdRguCgA==';
-//   script.crossOrigin = 'anonymous';
+// Function to update the LaTeX code
+function updateLatex(latexCode) {
+  // Display the LaTeX code in the textarea
 
-//   script.onload = function () {
-//     window.updateLatex = function (latexCode) {
-//       const latexCodeOutput = document.getElementById('latexOutput');
-//       const latexDisplayOutput = document.getElementById('codeOutput');
+}
 
-//       katex.render(latexCode, latexCodeOutput, { throwOnError: false });
-//       latexDisplayOutput.textContent = latexCode;
-//     };
-//   };
+//Download image
+function downloadImage() {
+  var textareaContent = document.getElementById('latexOutput');
 
-//   document.head.appendChild(script);
+  // Use html2canvas to capture the content of the textarea
+  html2canvas(textareaContent).then(function(canvas) {
+      // Convert the canvas to data URL
+      var dataURL = canvas.toDataURL('image/png');
 
-//   // Function to handle button click
-//   function handleButtonClick(latexCode) {
-//     const latexCodeOutput = document.getElementById('latexOutput');
-//     const latexDisplayOutput = document.getElementById('codeOutput');
+      // Create a temporary link element
+      var link = document.createElement('a');
+      link.href = dataURL;
+      link.download = 'latexOutput.png';
 
-//     // Render LaTeX code in the latexOutput div
-//     katex.render(latexCode, latexCodeOutput, { throwOnError: false });
+      // Trigger a click event to download the image
+      link.click();
+  });
+}
 
-//     // Display the entered LaTeX code in the codeOutput div
-//     latexDisplayOutput.textContent = latexCode;
-//   }
+// function updateLatex(latexCode) {
+//   const latexCodeOutput = document.getElementById('latexOutput');
+//   const latexDisplayOutput = document.getElementById('codeOutput');
+//   var currentLatex = document.getElementById('latexOutput').value;
+//   document.getElementById('latexOutput').value = currentLatex + latexCode;
+//   // Render LaTeX code in the latexOutput div
+//   katex.render(latexCode, latexCodeOutput, { throwOnError: false });
 
-//   // Get all buttons and add click event listeners
-//   const buttons = document.querySelectorAll('.latex_eq button');
-//   buttons.forEach(function (button) {
-//     button.addEventListener('click', function () {
-//       const latexCode = button.getAttribute('data-latex');
-//       handleButtonClick(latexCode);
-//     });
-//   });
-// });
+//   // Display the entered LaTeX code in the codeOutput div
+//   latexDisplayOutput.textContent = latexCode;
+//   // Render LaTeX code in the codeOutput div
+//   katex.render(latexCode, latexDisplayOutput, { throwOnError: false });
+// }
 
-function updateLatex(latex) {
+// Function to update the LaTeX code
+function updateLatex(latexCode) {
+  const latexCodeOutput = document.getElementById('latexOutput');
+  const latexDisplayOutput = document.getElementById('codeOutput');
+
+  // Display the LaTeX code in the textarea
   var currentLatex = document.getElementById('latexOutput').value;
-  document.getElementById('latexOutput').value = currentLatex + latex;
- }
+  document.getElementById('latexOutput').value = currentLatex + latexCode;
+
+  // Render LaTeX code in the latexOutput div
+  katex.render(document.getElementById('latexOutput').value, latexCodeOutput, { throwOnError: false });
+
+  // Display the entered LaTeX code in the codeOutput div
+  latexDisplayOutput.textContent = document.getElementById('latexOutput').value;
+
+  // Render LaTeX code in the codeOutput div
+  katex.render(document.getElementById('latexOutput').value, latexDisplayOutput, { throwOnError: false });
+}
