@@ -1,6 +1,9 @@
 body {
   height: 100%;
   margin: 0;
+  background-image: url("147871.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .box {
@@ -13,14 +16,9 @@ body {
 }
 
 .toolbar {
-  background-color: #3498db;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  border-radius: 10px 10px 0 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .toolbar h1 {
@@ -31,20 +29,136 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex: 1;
+  width: auto;
 }
 
 .latex_eq {
   padding: 20px;
   border: 2px solid #3498db;
   flex: 1;
+  border-radius: 10px;
+  height: 700px;
 }
 
-.latex_code, .latex_display {
+.latex_code {
+  padding: 20px;
+  border: 2px solid #3498db;
+  flex: 2; /* Set flex to a larger value to make it wider */
+  border-radius: 10px;
+}
+
+.latex_display {
   padding: 20px;
   border: 2px solid #3498db;
   flex: 1;
+  border-radius: 10px;
 }
 
-textarea{
+button {
+  border: none;
+  background-color: rgb(151, 217, 226);
+  height: 25px;
+  width: 120px;
+  border-radius: 6px;
+  transition: transform 0.2s;
+  margin: 7px;
+  flex-direction: row;
+}
+
+button:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+textarea {
+  border-radius: 10px;
+  height: 690px;
+  width: 500px;
   resize: none;
 }
+
+
+@import url('http://fonts.googleapi.com/css2?family=poppins&display=swap  ');
+*{
+  margin:0;
+  padding:0; 
+  box-sizing:border-box;
+  font-family:'poppins',sans-serif;
+}
+
+header{
+  width :100%;
+  height:50px;
+  background:#5f5c5c;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+
+.Logo{
+  color:rgb(160, 0, 0);
+  font-size:1.5em;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+}
+
+.nav ol{
+  display:flex;
+  list-style:none;
+}
+
+.btn{
+  position:relative;
+  width:25px;
+  height:25px;
+  -webkit-appearance:none;
+  appearance:none;
+  cursor:pointer;
+  display:none;
+}
+
+.btn::before{
+  content:'\f069';
+  position:absolute;
+  top:0;
+  left:0;
+  font-family:'Font Awsome 5 Free';
+  font-weight:700px;
+  font-size:2em;
+}
+
+.nav ol li{margin:1em;}
+
+.nav ol a {
+  text-decoration:none;
+  padding:0.2em 1.2em 0.9em 1.2em;
+  border-radius:10px 10px 0 0;
+  color:rgb(39,39,39);
+  transition: all .4s;
+  position:relative;
+  z-index:1;
+}
+
+.nav ol li a::before{
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:41px;
+  border-radius:10px 10px 0 0 ;
+  background:#853333;
+  transform-origin:bottom;
+  background:linear-gradient(to right,#2C5364,#203A43, #0F2027);
+  transform:scaleY(0.05);
+  z-index:-1;
+  transform:all .4s;
+}
+
+.nav ol li a:hover::before{transform:scaleY(1.1);}
+
+.nav ol li a:hover{color:white}
+
