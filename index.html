@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <p class="logo">Navbar</p>
+        <p class="logo">Latex Equation Editor</p>
         <input type="checkbox" name="" class="btn"/>
         <div class="nav">
             <ol>
@@ -33,11 +33,16 @@
         <div class="workspace">
             <div class="latex_eq">
                 <div class="latex_eq1">
-                    <div class="Binary_ops" >
-                        <button onclick="toggleImages()">Binary Operator</button>
-                    </div>
+                        <button onclick="toggleImages()" >Binary Operator</button>
+                        <button onclick="toggleImages()">Cases</button>
+                        <button onclick="toggleImages()">Fraction</button>
+                        <button onclick="toggleImages()">Greek letters</button>
+                        <button onclick="toggleImages()">Integral</button>
+                        <button onclick="toggleImages()">Operator</button>
+                        <button onclick="toggleImages()">Large Operator</button>
+                        <button onclick="toggleImages()">Sub Super</button>
                 </div>
-                <div class="latex_eq_display" id="binaryIconsContainer">
+                <div class="latex_eq_display" id="IconsContainer">
                     <!-- <img  src="images/Binary ops/+.png" alt="minus" class="icon" onclick="updateLatex('+')" >
                     <img src="images/Binary ops/-.png" alt="plus" class="icon"  onclick="updateLatex('+')"> -->
                 </div>

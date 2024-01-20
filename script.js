@@ -78,14 +78,14 @@ function display() {
 }
 
 function toggleImages() {
-  var binaryIconsContainer = document.getElementById('binaryIconsContainer');
+  var IconsContainer = document.getElementById('IconsContainer');
 
   // Create the HTML content for the images
-  var imagesHTML = `
+  var BinaryHTML = `
       <img src="images/Binary ops/+.png" alt="plus" class="icon" onclick="updateLatex('+')">
       <img src="images/Binary ops/-.png" alt="minus" class="icon" onclick="updateLatex('-')">
   `;
 
   // Set the innerHTML of the container
-  binaryIconsContainer.innerHTML = imagesHTML;
+  IconsContainer.innerHTML = BinaryHTML;
 }
