@@ -112,7 +112,7 @@ body {
 
 .toolbar {
   height: 200px;
-  background-image:linear-gradient(to right,white , White   );
+  background-color:linear-gradient(to right,white , White   );
   border-radius: 10px;
 }
 
