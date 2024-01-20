@@ -59,7 +59,7 @@ function downloadImage() {
       // Create a temporary link element
       var link = document.createElement('a');
       link.href = dataURL;
-      link.download = 'imagess.png';
+      link.download = 'images.png';
 
       // Trigger a click event to download the image
       link.click();
@@ -77,17 +77,71 @@ function display() {
   }
 }
 
-function toggleImages() {
+function binaryDisplay() {
   var iconsContainer = document.getElementById('IconsContainer');
-
   // Create the HTML content for the images
   var BinaryHTML = `
-      <img src="images/Binary ops/+.png" alt="plus" class="icon" onclick="updateLatex('+')">
-      <img src="images/Binary ops/-.png" alt="minus" class="icon" onclick="updateLatex('-')">
+    <img src="images/Binary ops/+.png" alt="plus" class="icon" onclick="updateLatex('+')">
+    <img src="images/Binary ops/-.png" alt="minus" class="icon" onclick="updateLatex('-')">
+    
   `;
-  var casesHtml=`
-      
-  `
-  // Set the innerHTML of the container
   iconsContainer.innerHTML = BinaryHTML;
+}
+
+function caseDisplay(){
+  var iconsContainer = document.getElementById('IconsContainer');
+  var caseHtml=`
+    <img src="images/Cases/x=abc.png" alt="" class="icon" onclick="updateLatex('+')">
+  `;
+  iconsContainer.innerHTML = caseHtml;
+}
+
+function fractionDisplay(){
+  var iconsContainer = document.getElementById('IconsContainer');
+  var fraction=`
+  <img src="images/Fractions/d2f(x).png" alt="" class="icon" onclick="updateLatex('+')">
+  
+  `;
+  iconsContainer.innerHTML = fraction;
+}
+
+function greekLettersDisplay(){
+  var iconsContainer = document.getElementById('IconsContainer');
+  var greek=`
+    <img src="images/greek letters/alpha.png" alt="" class="icon" onclick="updateLatex('+')">
+  `;
+  iconsContainer.innerHTML=greek;
+}
+
+function integralDisplay(){
+  var iconsContainer = document.getElementById('IconsContainer');
+  var integral=`
+  <img src="images/integral/baf(x).png" alt="" class="icon" onclick="updateLatex('+')">
+  `;
+  iconsContainer.innerHTML=integral;
+}
+
+function operatorDisplay(){
+  var iconsContainer = document.getElementById('IconsContainer');
+  var Operator=`
+  
+  <img src="images/large ops/bigcap(0_n).png" alt="" class="icon" onclick="updateLatex('+')">
+  `;
+  iconsContainer.innerHTML = Operator;
+}
+
+function largeOpereatorDisplay(){
+  var iconsContainer = document.getElementById('IconsContainer');
+  var operators=`
+  <img src="images/Operators/f.png" alt="" class="icon" onclick="updateLatex('+')">
+  `;
+  iconsContainer.innerHTML = operators;
+}
+
+function subSuperDisplay(){
+  var iconsContainer = document.getElementById('IconsContainer');
+  var subSuper=`
+  <img src="images/Sub_Super/Cab.png" alt="" class="icon" onclick="updateLatex('+')">
+  `;
+  iconsContainer.innerHTML = subSuper;
 }
