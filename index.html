@@ -32,10 +32,15 @@
        </div>
         <div class="workspace">
             <div class="latex_eq">
-                <!-- Your HTML buttons -->
-                <button onclick="updateLatex('\\sqrt{x}')">Square Root</button>
-                <button onclick="updateLatex('\\frac{x}{y}')">Fraction</button>
-                <!-- Add more buttons  -->
+                <div class="latex_eq1">
+                    <div class="Binary_ops" >
+                        <button onclick="toggleImages()">Binary Operator</button>
+                    </div>
+                </div>
+                <div class="latex_eq_display" id="binaryIconsContainer">
+                    <!-- <img  src="images/Binary ops/+.png" alt="minus" class="icon" onclick="updateLatex('+')" >
+                    <img src="images/Binary ops/-.png" alt="plus" class="icon"  onclick="updateLatex('+')"> -->
+                </div>
             </div>
             <div class="latex_code">
                 <textarea class="display" id="latexOutput"  ></textarea>
